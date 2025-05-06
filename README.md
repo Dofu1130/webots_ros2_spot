@@ -6,16 +6,15 @@ This is a ROS 2 package to simulate the Boston Dynamics spot in [webots](https:/
 
 The world contains apriltags, a red line to test lane follower and objects for manipulation tasks.
 
+![Spot](spot.png)
+
 ## At this point you might have switched to this branch
 
 Follow these steps
 
-1. Switch to 2023 controller 
+1. Install Kortex description and robotiq description and gripper controller
     ```
-    cd src/webots_ros2
-    git checkout 2023.1.2
-    cd back/to/ros2_ws
-    chmod +x src/webots_ros2/webots_ros2_driver/webots_ros2_driver/ros2_supervisor.py
+    sudo apt install ros-humble-kortex-description ros-humble-robotiq-description ros-humble-gripper-controllers
     ```
 
 2. Build packages and source the workspace
@@ -24,16 +23,11 @@ Follow these steps
     source install/setup.bash
     ```
 
-3. Add Kortex description and robotiq description and gripper controller
-    ```
-    sudo apt install ros-humble-kortex-description ros-humble-robotiq-description ros-humble-gripper-controllers
-    ```
-
-4. Add missing Meshes
+3. Add missing Meshes (yes, even though you installed it up there)
 
     Copy the 2f_140 folder in ```opt/ros/humble/share/robotiq_description/meshes/visual``` and ```opt/ros/humble/share/robotiq_description/meshes/collision```
 
-5. If the IK solver is missing, install from [here](https://github.com/PickNikRobotics/pick_ik)
+4. If the IK solver is missing, install from [here](https://github.com/PickNikRobotics/pick_ik)
 
 ## Start
 Starting the simulation:
