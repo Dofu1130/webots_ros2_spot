@@ -46,6 +46,7 @@ setup(
     entry_points={
         "console_scripts": [
             "spot_driver = " + package_name + ".spot_driver:main",
+            "mobile_driver = " + package_name + ".mobile_driver:main",
             "spot_pointcloud2 = " + package_name + ".spot_pointcloud2:main",
             "set_initial_pose = " + package_name + ".set_initial_pose:main",
             "gpp_stacker = " + package_name + ".gpp_stacker:main",
